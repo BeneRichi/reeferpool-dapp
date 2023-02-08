@@ -1,10 +1,10 @@
 {
-	"name": "@richardev/vue3-boilerplate",
-	"description": "Quick boilerplate for your next project, containing - Vite, Vuex, Vue Router & Tailwind CSS. This was created as part of my tutorial series.",
+	"name": "Reeferpool Dapp",
+	"description": "Bet on the future with our decentralized gambling dAPP! Predict the Reef coin price correctly and win big! With our secure blockchain technology, you can make your bets with confidence, knowing that your winnings will be accurately and transparently recorded.",
 	"version": "1.0.8",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/richardevcom/vue3-boilerplate.git"
+		"url": "https://github.com/BeneRichi/reeferpool-dapp"
 	},
 	"scripts": {
 		"dev": "vite",
@@ -67,5 +67,5 @@
 		"vue3 enterprise starter",
 		"vue 3 enterprise starter"
 	],
-	"author": "richardevcom <hello@richardev.com> (https://richardev.com)"
+	"author": "Benedict Ritschel"
 }
