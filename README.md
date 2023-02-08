@@ -10,8 +10,8 @@ the project further:
 ```shell
 git clone https://github.com/BeneRichi/reeferpool-dapp
 cd reeferpool-dapp/
-yarn install
-yarn run dev
+npm install
+npm run dev
 ```
 
 ## Licensing
