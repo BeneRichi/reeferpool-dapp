@@ -1,0 +1,14 @@
+@use "./base.scss";
+@use "./variables/_color.scss";
+@use "./variables/_button.scss";
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+    background-color: color.$dark-color-strongest;
+    color: white;
+  }
+  

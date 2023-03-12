@@ -1,37 +1,25 @@
 <template>
-  <div>
-    <cHeader class="header">
-      <Logo />
-      <Navigation />
-    </cHeader>
-
-    <lContainer>
-      <RouterView />
-    </lContainer>
-
-    <cFooter />
+  <div class="c-navigation flex gap-8">
+    <nav class="c-navigation__nav flex items-center">
+      <ul>
+        <RouterLink to="/about">About</RouterLink>
+      </ul>
+    </nav>
+    <e-button type="primary">Connect Wallet</e-button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import cHeader from "./components/c-header.vue";
-import lContainer from "./layouts/l-container.vue";
-import cFooter from "./components/c-footer.vue";
+import { RouterLink } from "vue-router";
+import eButton from "../elements/e-button.vue";
 
-// interface ISetup {}
-// interface IData {}
-
-/**
- * TODO: add component description.
- */
 export default defineComponent({
-  name: "PredictionView",
+  name: "c-navigation",
 
   components: {
-    cHeader,
-    cFooter,
-    lContainer,
+    RouterLink,
+    eButton,
   },
 
   // props: {},
@@ -62,8 +50,18 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.c-prediction {
-  // TODO: update selector according to filename
-  // ...
+.c-navigation {
+  &__nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+  }
+
+  &__nav a {
+    text-decoration: none;
+    color: white;
+  }
 }
 </style>

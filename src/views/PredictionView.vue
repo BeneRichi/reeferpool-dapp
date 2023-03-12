@@ -1,23 +1,14 @@
 <template>
-  <div>
-    <cHeader class="header">
-      <Logo />
-      <Navigation />
-    </cHeader>
-
-    <lContainer>
-      <RouterView />
-    </lContainer>
-
-    <cFooter />
-  </div>
+  <main>
+    <cpPredictionMaker />
+  </main>
 </template>
-
 <script lang="ts">
+
+
+.230
 import { defineComponent } from "vue";
-import cHeader from "./components/c-header.vue";
-import lContainer from "./layouts/l-container.vue";
-import cFooter from "./components/c-footer.vue";
+import cpPredictionMaker from "../components/prediction/c-p-prediction-maker.vue";
 
 // interface ISetup {}
 // interface IData {}
@@ -29,9 +20,7 @@ export default defineComponent({
   name: "PredictionView",
 
   components: {
-    cHeader,
-    cFooter,
-    lContainer,
+    cpPredictionMaker,
   },
 
   // props: {},

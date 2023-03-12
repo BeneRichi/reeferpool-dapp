@@ -1,0 +1,75 @@
+/* Remove default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a box-sizing border-box to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set default font styles for the page */
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+/* Set a max-width and center the page content */
+body {
+  margin: 0 auto;
+  color: white;
+}
+
+/* Add styles for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+/* Add basic styles for links */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add basic styles for lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Add basic styles for images */
+img {
+  max-width: 100%;
+  height: auto;
+}
