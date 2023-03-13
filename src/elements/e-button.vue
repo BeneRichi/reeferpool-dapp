@@ -1,38 +1,69 @@
 <template>
-    <button type="button" :class="btnClasses" @click="handleClick">
-      <slot></slot>
-    </button>
-  </template>
+  <button
+    type="button"
+    :class="btnClasses"
+    class="flex gap-2 items-center"
+  >
+    <fa-icon :icon="icon" />
+    <slot></slot>
+  </button>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
+
+  // interface ISetup {}
+  // interface IData {}
   
-  <script lang="ts">
-  import { defineComponent } from 'vue';
-  
-  export default defineComponent({
-    props: {
-      type: {
-        type: String,
-        validator: (value: string) => {
-          return ['primary', 'secondary'].includes(value);
-        },
-        default: 'primary',
-      },
+export default defineComponent({
+  name: "e-button",
+
+  props: {
+    type: {
+      type: String,
+      validator: (value: string) => ["primary", "secondary"].includes(value),
+      default: "primary",
     },
-    methods: {
-      handleClick() {
-        this.$emit('click');
-      },
+    icon: {
+      type: Object,
+      validator: (value: IconDefinition) =>
+        typeof value === "object" && value !== null,
+      default: null,
     },
-    computed: {
-      btnClasses(): string[] {
-        return ['btn', `btn-${this.type}`];
-      },
+  },
+
+  // props: {},
+  // emits: {},
+
+  // setup(): ISetup {},
+  // data(): IData {
+  //   return {};
+  // },
+
+  computed: {
+    btnClasses(): string[] {
+      return ["btn", `btn-${this.type}`];
     },
-  });
-  </script>
-  
-  <style lang="scss">
-  .btn {
-    /* your button styles here */
-  }  
-  </style>
-  
+  },
+  // watch: {},
+
+  // beforeCreate() {},
+  // created() {},
+  // beforeMount() {},
+  // mounted() {},
+  // beforeUpdate() {},
+  // updated() {},
+  // activated() {},
+  // deactivated() {},
+  // beforeUnmount() {},
+  // unmounted() {},
+
+});
+</script>
+
+<style lang="scss">
+.btn {
+  /* your button styles here */
+}
+</style>
