@@ -2,10 +2,12 @@
   <div class="c-navigation flex gap-8">
     <nav class="c-navigation__nav flex items-center">
       <ul>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">How it works</RouterLink>
       </ul>
     </nav>
-    <e-button type="primary">Connect Wallet</e-button>
+    <e-button type="primary" :icon="wallet" @click="connectWallet()"
+      >Connect Wallet
+    </e-button>
   </div>
 </template>
 
@@ -13,6 +15,14 @@
 import { defineComponent } from "vue";
 import { RouterLink } from "vue-router";
 import eButton from "../elements/e-button.vue";
+import connect from "../packages/reef-extension/index.js";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
+import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet';
+
+// interface ISetup {}
+interface IData {
+  wallet: IconDefinition;
+}
 
 export default defineComponent({
   name: "c-navigation",
@@ -26,9 +36,11 @@ export default defineComponent({
   // emits: {},
 
   // setup(): ISetup {},
-  // data(): IData {
-  //   return {};
-  // },
+  data(): IData {
+    return {
+      wallet: faWallet,
+    };
+  },
 
   // computed: {},
   // watch: {},
@@ -44,7 +56,11 @@ export default defineComponent({
   // beforeUnmount() {},
   // unmounted() {},
 
-  // methods: {},
+  methods: {
+    connectWallet() {
+      connect(); // Call the default export function provided by the module
+    },
+  },
   // render() {},
 });
 </script>
